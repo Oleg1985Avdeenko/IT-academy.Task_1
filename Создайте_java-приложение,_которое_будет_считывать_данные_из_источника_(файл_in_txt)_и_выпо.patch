@@ -1,0 +1,913 @@
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/pom.xml b/pom.xml
+--- a/pom.xml	(revision 528a3a6c3c59becff2cc954769e4943436b6e006)
++++ b/pom.xml	(date 1670962515952)
+@@ -2,133 +2,143 @@
+ <project xmlns="http://maven.apache.org/POM/4.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+-  <modelVersion>4.0.0</modelVersion>
++    <modelVersion>4.0.0</modelVersion>
+ 
+-  <groupId>com.example</groupId>
+-  <artifactId>Task_1</artifactId>
+-  <version>1.0-SNAPSHOT</version>
+-  <name>Task_1</name>
++    <groupId>com.example</groupId>
++    <artifactId>Task_1</artifactId>
++    <version>1.0-SNAPSHOT</version>
++    <name>Task_1</name>
+ 
+-  <properties>
+-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+-    <junit.version>5.8.2</junit.version>      </properties>
++    <properties>
++        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
++        <junit.version>5.8.2</junit.version>
++    </properties>
+ 
+-  <dependencies>
+-    <dependency>
+-      <groupId>org.openjfx</groupId>
+-      <artifactId>javafx-controls</artifactId>
+-      <version>18</version>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.openjfx</groupId>
+-      <artifactId>javafx-fxml</artifactId>
+-      <version>18</version>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.openjfx</groupId>
+-      <artifactId>javafx-web</artifactId>
+-      <version>18</version>
+-    </dependency>    <dependency>
+-      <groupId>org.openjfx</groupId>
+-      <artifactId>javafx-media</artifactId>
+-      <version>18</version>
+-    </dependency>    <dependency>
+-      <groupId>org.controlsfx</groupId>
+-      <artifactId>controlsfx</artifactId>
+-      <version>11.1.1</version>
+-    </dependency>    <dependency>
+-      <groupId>com.dlsc.formsfx</groupId>
+-      <artifactId>formsfx-core</artifactId>
+-      <version>11.3.2</version>
+-      <exclusions>
+-        <exclusion>
+-          <groupId>org.openjfx</groupId>
+-          <artifactId>*</artifactId>
+-        </exclusion>
+-      </exclusions>
+-    </dependency>    <dependency>
+-      <groupId>net.synedra</groupId>
+-      <artifactId>validatorfx</artifactId>
+-      <version>0.2.1</version>
+-      <exclusions>
+-        <exclusion>
+-          <groupId>org.openjfx</groupId>
+-          <artifactId>*</artifactId>
+-        </exclusion>
+-      </exclusions>
+-    </dependency>    <dependency>
+-      <groupId>org.kordamp.ikonli</groupId>
+-      <artifactId>ikonli-javafx</artifactId>
+-      <version>12.3.0</version>
+-    </dependency>    <dependency>
+-      <groupId>org.kordamp.bootstrapfx</groupId>
+-      <artifactId>bootstrapfx-core</artifactId>
+-      <version>0.4.0</version>
+-    </dependency>    <dependency>
+-      <groupId>eu.hansolo</groupId>
+-      <artifactId>tilesfx</artifactId>
+-      <version>11.48</version>
+-      <exclusions>
+-        <exclusion>
+-          <groupId>org.openjfx</groupId>
+-          <artifactId>*</artifactId>
+-        </exclusion>
+-      </exclusions>
+-    </dependency>    <dependency>
+-      <groupId>com.github.almasb</groupId>
+-      <artifactId>fxgl</artifactId>
+-      <version>17</version>
+-      <exclusions>
+-        <exclusion>
+-          <groupId>org.openjfx</groupId>
+-          <artifactId>*</artifactId>
+-        </exclusion>
+-      </exclusions>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.junit.jupiter</groupId>
+-      <artifactId>junit-jupiter-api</artifactId>
+-      <version>${junit.version}</version>
+-      <scope>test</scope>
+-    </dependency>
+-    <dependency>
+-      <groupId>org.junit.jupiter</groupId>
+-      <artifactId>junit-jupiter-engine</artifactId>
+-      <version>${junit.version}</version>
+-      <scope>test</scope>
+-    </dependency>              </dependencies>
++    <dependencies>
++        <dependency>
++            <groupId>org.openjfx</groupId>
++            <artifactId>javafx-controls</artifactId>
++            <version>18</version>
++        </dependency>
++        <dependency>
++            <groupId>org.openjfx</groupId>
++            <artifactId>javafx-fxml</artifactId>
++            <version>18</version>
++        </dependency>
++        <dependency>
++            <groupId>org.openjfx</groupId>
++            <artifactId>javafx-web</artifactId>
++            <version>18</version>
++        </dependency>
++        <dependency>
++            <groupId>org.openjfx</groupId>
++            <artifactId>javafx-media</artifactId>
++            <version>18</version>
++        </dependency>
++        <dependency>
++            <groupId>org.controlsfx</groupId>
++            <artifactId>controlsfx</artifactId>
++            <version>11.1.1</version>
++        </dependency>
++        <dependency>
++            <groupId>com.dlsc.formsfx</groupId>
++            <artifactId>formsfx-core</artifactId>
++            <version>11.3.2</version>
++            <exclusions>
++                <exclusion>
++                    <groupId>org.openjfx</groupId>
++                    <artifactId>*</artifactId>
++                </exclusion>
++            </exclusions>
++        </dependency>
++        <dependency>
++            <groupId>net.synedra</groupId>
++            <artifactId>validatorfx</artifactId>
++            <version>0.2.1</version>
++            <exclusions>
++                <exclusion>
++                    <groupId>org.openjfx</groupId>
++                    <artifactId>*</artifactId>
++                </exclusion>
++            </exclusions>
++        </dependency>
++        <dependency>
++            <groupId>org.kordamp.ikonli</groupId>
++            <artifactId>ikonli-javafx</artifactId>
++            <version>12.3.0</version>
++        </dependency>
++        <dependency>
++            <groupId>org.kordamp.bootstrapfx</groupId>
++            <artifactId>bootstrapfx-core</artifactId>
++            <version>0.4.0</version>
++        </dependency>
++        <dependency>
++            <groupId>eu.hansolo</groupId>
++            <artifactId>tilesfx</artifactId>
++            <version>11.48</version>
++            <exclusions>
++                <exclusion>
++                    <groupId>org.openjfx</groupId>
++                    <artifactId>*</artifactId>
++                </exclusion>
++            </exclusions>
++        </dependency>
++        <dependency>
++            <groupId>com.github.almasb</groupId>
++            <artifactId>fxgl</artifactId>
++            <version>17</version>
++            <exclusions>
++                <exclusion>
++                    <groupId>org.openjfx</groupId>
++                    <artifactId>*</artifactId>
++                </exclusion>
++            </exclusions>
++        </dependency>
++        <dependency>
++            <groupId>org.junit.jupiter</groupId>
++            <artifactId>junit-jupiter-api</artifactId>
++            <version>${junit.version}</version>
++            <scope>test</scope>
++        </dependency>
++        <dependency>
++            <groupId>org.junit.jupiter</groupId>
++            <artifactId>junit-jupiter-engine</artifactId>
++            <version>${junit.version}</version>
++            <scope>test</scope>
++        </dependency>
++    </dependencies>
+ 
+-  <build>
++    <build>
+         <plugins>
+             <plugin>
+-        <groupId>org.apache.maven.plugins</groupId>
+-        <artifactId>maven-compiler-plugin</artifactId>
+-        <version>3.10.1</version>
+-        <configuration>
+-          <source>18</source>
+-          <target>18</target>
+-        </configuration>
++                <groupId>org.apache.maven.plugins</groupId>
++                <artifactId>maven-compiler-plugin</artifactId>
++                <version>3.10.1</version>
++                <configuration>
++                    <source>18</source>
++                    <target>18</target>
++                </configuration>
+             </plugin>
+-      <plugin>
+-        <groupId>org.openjfx</groupId>
+-        <artifactId>javafx-maven-plugin</artifactId>
+-        <version>0.0.8</version>
+-        <executions>
+-          <execution>
+-            <!-- Default configuration for running with: mvn clean javafx:run -->
+-            <id>default-cli</id>
+-            <configuration>
+-              <mainClass>com.example.task_1/com.example.task_1.HelloApplication</mainClass>
+-              <launcher>app</launcher>
+-              <jlinkZipName>app</jlinkZipName>
+-              <jlinkImageName>app</jlinkImageName>
+-              <noManPages>true</noManPages>
+-              <stripDebug>true</stripDebug>
+-              <noHeaderFiles>true</noHeaderFiles>
+-            </configuration>
+-          </execution>
+-        </executions>
+-      </plugin>
+-          </plugins>
+-  </build>
++            <plugin>
++                <groupId>org.openjfx</groupId>
++                <artifactId>javafx-maven-plugin</artifactId>
++                <version>0.0.8</version>
++                <executions>
++                    <execution>
++                        <!-- Default configuration for running with: mvn clean javafx:run -->
++                        <id>default-cli</id>
++                        <configuration>
++                            <mainClass>com.example.task_1/com.example.task_1.Main</mainClass>
++                            <launcher>app</launcher>
++                            <jlinkZipName>app</jlinkZipName>
++                            <jlinkImageName>app</jlinkImageName>
++                            <noManPages>true</noManPages>
++                            <stripDebug>true</stripDebug>
++                            <noHeaderFiles>true</noHeaderFiles>
++                        </configuration>
++                    </execution>
++                </executions>
++            </plugin>
++        </plugins>
++    </build>
+ </project>
+\ No newline at end of file
+Index: src/main/java/com/example/task_1/TaskController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/task_1/TaskController.java b/src/main/java/com/example/task_1/TaskController.java
+--- a/src/main/java/com/example/task_1/TaskController.java	(revision 528a3a6c3c59becff2cc954769e4943436b6e006)
++++ b/src/main/java/com/example/task_1/TaskController.java	(date 1670962949532)
+@@ -1,14 +1,94 @@
+ package com.example.task_1;
++/**
++ * the class has a method initialize() that handles a "Sort" button click and reads data from a file
++ * with the full path to which is entered in the text field
++ * the method openNewScene() calls a window with a message if the file was not found
++ * класс имеет   метод initialize()? который обрабатывает щелчок по кнопке "Sort"
++ * и читает данные из файла полный путь к которому вписан в текстовое поле
++ * метод openNewScene() вызывает окно с сообщением если файл был не найден
++ */
+ 
+ import javafx.fxml.FXML;
+-import javafx.scene.control.Label;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Parent;
++import javafx.scene.Scene;
++import javafx.scene.control.Button;
++import javafx.scene.control.TextField;
++import javafx.stage.Stage;
++
++import java.io.BufferedReader;
++import java.io.File;
++import java.io.FileNotFoundException;
++import java.io.FileReader;
++import java.io.IOException;
++import java.net.URL;
++import java.util.ResourceBundle;
++
++public class TaskController {
++    private String name;
++
+ 
+-public class HelloController {
++    @FXML
++    private ResourceBundle resources;
++
+     @FXML
+-    private Label welcomeText;
++    private URL location;
++
+ 
+     @FXML
+-    protected void onHelloButtonClick() {
+-        welcomeText.setText("Welcome to JavaFX Application!");
++    private TextField fileName;
++
++    @FXML
++    private Button sortButton;
++
++
++    @FXML
++    void initialize() {
++        sortButton.setOnAction(actionEvent -> {
++            Sorter sorter = new Sorter();
++            SortWriter sortWriter = new SortWriter();
++            name = fileName.getText().trim();
++            if (name.equals("")) {
++                sortButton.getScene().getWindow().hide();
++                openNewScene("messege.fxml");
++            }
++            try {
++                File file = new File(name);
++
++                FileReader fileReader = new FileReader(file);
++                BufferedReader bufferedReader = new BufferedReader(fileReader);
++                String line = null;
++                while ((line = bufferedReader.readLine()) != null) {
++                    sorter.stringList.add(line);
++                }
++            } catch (FileNotFoundException e) {
++                sortButton.getScene().getWindow().hide();
++                openNewScene("messege.fxml");
++                e.printStackTrace();
++            } catch (IOException e) {
++                e.printStackTrace();
++            }
++            sorter.setStringList(sorter.stringList);
++            sorter.sortData();
++
++        });
++
+     }
+-}
+\ No newline at end of file
++
++    public void openNewScene(String window) {
++
++        FXMLLoader fxmlLoader = new FXMLLoader();
++        fxmlLoader.setLocation(getClass().getResource(window));
++
++        try {
++            fxmlLoader.load();
++        } catch (IOException e) {
++            throw new RuntimeException(e);
++        }
++
++        Parent root = fxmlLoader.getRoot();
++        Stage stage = new Stage();
++        stage.setScene(new Scene(root));
++        stage.showAndWait();
++    }
++}
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 528a3a6c3c59becff2cc954769e4943436b6e006)
++++ b/.idea/workspace.xml	(date 1670965334893)
+@@ -5,18 +5,49 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="8962a946-3801-470e-b608-082330600e53" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/NewFile.txt" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/in.txt" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/task_1/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_1/MessegeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/task_1/MessegeController.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_1/SortWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/task_1/SortWriter.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_1/Sorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/task_1/Sorter.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/task_1/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/task_1/TaskController.java" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/task_1/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/task_1/hello-view.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/task_1/messege.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/task_1/messege.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/task_1/task.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/task_1/task.fxml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+     <option name="LAST_RESOLUTION" value="IGNORE" />
++  </component>
++  <component name="FileTemplateManagerImpl">
++    <option name="RECENT_TEMPLATES">
++      <list>
++        <option value="FxmlFile" />
++        <option value="Class" />
++      </list>
++    </option>
+   </component>
+   <component name="Git.Settings">
++    <option name="PUSH_TAGS">
++      <GitPushTagMode>
++        <option name="argument" value="--tags" />
++        <option name="title" value="All" />
++      </GitPushTagMode>
++    </option>
++    <option name="RECENT_BRANCH_BY_REPOSITORY">
++      <map>
++        <entry key="$PROJECT_DIR$" value="master" />
++      </map>
++    </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="MarkdownSettingsMigration">
++    <option name="stateVersion" value="1" />
++  </component>
+   <component name="ProjectId" id="2IsFVzKIDVi5HEUAikh9AIgkxKj" />
+   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+@@ -26,9 +57,30 @@
+   <component name="PropertiesComponent"><![CDATA[{
+   "keyToString": {
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true"
++    "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true"
+   }
+ }]]></component>
++  <component name="RunManager">
++    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
++      <option name="MAIN_CLASS_NAME" value="com.example.task_1.Main" />
++      <module name="Task_1" />
++      <extension name="coverage">
++        <pattern>
++          <option name="PATTERN" value="com.example.task_1.*" />
++          <option name="ENABLED" value="true" />
++        </pattern>
++      </extension>
++      <method v="2">
++        <option name="Make" enabled="true" />
++      </method>
++    </configuration>
++    <recent_temporary>
++      <list>
++        <item itemvalue="Application.Main" />
++      </list>
++    </recent_temporary>
++  </component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+Index: src/main/java/com/example/task_1/SortWriter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/task_1/SortWriter.java b/src/main/java/com/example/task_1/SortWriter.java
+--- a/src/main/java/com/example/task_1/SortWriter.java	(revision 528a3a6c3c59becff2cc954769e4943436b6e006)
++++ b/src/main/java/com/example/task_1/SortWriter.java	(date 1670963073042)
+@@ -1,2 +1,31 @@
+-package com.example.task_1;public class SortWriter {
+-}
++package com.example.task_1;
++/**
++ * the class has one method that writes data to a file
++ * класс имеет один  метод который записывает данные в файл
++ */
++
++import java.io.FileWriter;
++import java.io.IOException;
++import java.util.List;
++
++public class SortWriter {
++
++    public void writeSortFile(List<String> strings) {
++
++        try {
++            FileWriter writer = new FileWriter("NewFile.txt");
++
++            for (String line : strings) {
++                writer.write(line);
++                writer.write(System.getProperty("line.separator"));
++
++            }
++
++            writer.close();
++        } catch (IOException ex) {
++            ex.printStackTrace();
++        }
++
++    }
++
++}
+\ No newline at end of file
+Index: src/main/java/com/example/task_1/MessegeController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/task_1/MessegeController.java b/src/main/java/com/example/task_1/MessegeController.java
+--- a/src/main/java/com/example/task_1/MessegeController.java	(revision 528a3a6c3c59becff2cc954769e4943436b6e006)
++++ b/src/main/java/com/example/task_1/MessegeController.java	(date 1670963050826)
+@@ -1,2 +1,20 @@
+-package com.example.task_1;public class MessegeController {
++package com.example.task_1;
++
++import javafx.fxml.FXML;
++
++import java.net.URL;
++import java.util.ResourceBundle;
++
++public class MessegeController {
++
++    @FXML
++    private ResourceBundle resources;
++
++    @FXML
++    private URL location;
++
++    @FXML
++    void initialize() {
++
++    }
+ }
+Index: src/main/resources/com/example/task_1/messege.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/task_1/messege.fxml b/src/main/resources/com/example/task_1/messege.fxml
+--- a/src/main/resources/com/example/task_1/messege.fxml	(revision 528a3a6c3c59becff2cc954769e4943436b6e006)
++++ b/src/main/resources/com/example/task_1/messege.fxml	(date 1670963050820)
+@@ -1,14 +1,26 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ 
+-<?import java.lang.*?>
+-<?import java.util.*?>
+-<?import javafx.scene.*?>
+-<?import javafx.scene.control.*?>
+-<?import javafx.scene.layout.*?>
++<?import javafx.scene.control.Accordion?>
++<?import javafx.scene.layout.AnchorPane?>
++<?import javafx.scene.text.Font?>
++<?import javafx.scene.text.Text?>
+ 
+-<AnchorPane xmlns="http://javafx.com/javafx"
+-            xmlns:fx="http://javafx.com/fxml"
+-            fx:controller="$CONTROLLER_NAME$"
+-            prefHeight="400.0" prefWidth="600.0" >
+-
++<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="263.0" prefWidth="585.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.task_1.MessegeController">
++    <children>
++        <Accordion layoutX="233.0" layoutY="322.0" />
++        <AnchorPane layoutY="107.0" prefHeight="162.0" prefWidth="585.0" style="-fx-background-color: #fafafa;">
++            <children>
++                <Text layoutX="130.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="File not found" textAlignment="CENTER" wrappingWidth="324.6708984375">
++                    <font>
++                        <Font size="30.0" />
++                    </font>
++                </Text>
++            </children>
++        </AnchorPane>
++        <Text fill="#fafafa" layoutX="205.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task 1" wrappingWidth="178.6708984375">
++            <font>
++                <Font name="Comic Sans MS Bold Italic" size="40.0" />
++            </font>
++        </Text>
++    </children>
+ </AnchorPane>
+Index: src/main/resources/com/example/task_1/task.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/task_1/task.fxml b/src/main/resources/com/example/task_1/task.fxml
+--- a/src/main/resources/com/example/task_1/task.fxml	(revision 528a3a6c3c59becff2cc954769e4943436b6e006)
++++ b/src/main/resources/com/example/task_1/task.fxml	(date 1670963050812)
+@@ -1,16 +1,29 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ 
+-<?import javafx.geometry.Insets?>
+-<?import javafx.scene.control.Label?>
+-<?import javafx.scene.layout.VBox?>
+-
++<?import javafx.scene.control.Accordion?>
+ <?import javafx.scene.control.Button?>
+-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+-      fx:controller="com.example.task_1.TaskController">
+-    <padding>
+-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+-    </padding>
++<?import javafx.scene.control.TextField?>
++<?import javafx.scene.layout.AnchorPane?>
++<?import javafx.scene.text.Font?>
++<?import javafx.scene.text.Text?>
+ 
+-    <Label fx:id="welcomeText"/>
+-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+-</VBox>
++<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="662.0" prefWidth="588.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.task_1.TaskController">
++    <children>
++        <Accordion layoutX="233.0" layoutY="322.0" />
++        <AnchorPane layoutY="107.0" prefHeight="556.0" prefWidth="588.0" style="-fx-background-color: #fafafa;">
++            <children>
++                <TextField fx:id="fileName" layoutX="68.0" layoutY="36.0" prefHeight="48.0" prefWidth="452.0" promptText="File name" style="-fx-border-color: #2E3348; -fx-border-radius: 5;" />
++                <Button fx:id="sortButton" layoutX="240.0" layoutY="130.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="108.0" style="-fx-background-color: #fafafa;" text="Sort" textFill="#2e3348">
++                    <font>
++                        <Font name="Gadugi Bold" size="25.0" />
++                    </font>
++                </Button>
++            </children>
++        </AnchorPane>
++        <Text fill="#fafafa" layoutX="205.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Task 1" wrappingWidth="178.6708984375">
++            <font>
++                <Font name="Comic Sans MS Bold Italic" size="40.0" />
++            </font>
++        </Text>
++    </children>
++</AnchorPane>
+Index: src/main/java/com/example/task_1/Sorter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/task_1/Sorter.java b/src/main/java/com/example/task_1/Sorter.java
+--- a/src/main/java/com/example/task_1/Sorter.java	(revision 528a3a6c3c59becff2cc954769e4943436b6e006)
++++ b/src/main/java/com/example/task_1/Sorter.java	(date 1670963086603)
+@@ -1,2 +1,33 @@
+-package com.example.task_1;public class Sorter {
+-}
++package com.example.task_1;
++/**
++ * This class creates a collection and sorts it with the method sortData()
++ * Then it calls a method writeSortFile() that writes data to a file
++ * Этот класс создает коллекцию и сортирует ее методом sortData()
++ * После чего вызывает метод writeSortFile() который записывает данные в файл
++ */
++
++import java.util.ArrayList;
++import java.util.Collections;
++import java.util.List;
++
++public class Sorter {
++    List<String> stringList = new ArrayList<>();
++
++    public List<String> getStringList() {
++        return stringList;
++    }
++
++    public void setStringList(List<String> stringList) {
++        this.stringList = stringList;
++    }
++
++    public void sortData() {
++        SortWriter sortWriter = new SortWriter();
++
++        Collections.sort(stringList);
++        // System.out.println(stringList);
++        // To check reading.
++        sortWriter.writeSortFile(stringList);
++
++    }
++}
+\ No newline at end of file
+Index: src/main/java/module-info.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/module-info.java b/src/main/java/module-info.java
+--- a/src/main/java/module-info.java	(revision 528a3a6c3c59becff2cc954769e4943436b6e006)
++++ b/src/main/java/module-info.java	(date 1670962418228)
+@@ -1,16 +1,16 @@
+ module com.example.task_1 {
+     requires javafx.controls;
+     requires javafx.fxml;
+-        requires javafx.web;
+-            
+-        requires org.controlsfx.controls;
+-            requires com.dlsc.formsfx;
+-            requires validatorfx;
+-            requires org.kordamp.ikonli.javafx;
+-            requires org.kordamp.bootstrapfx.core;
+-            requires eu.hansolo.tilesfx;
+-            requires com.almasb.fxgl.all;
+-    
++    requires javafx.web;
++
++    requires org.controlsfx.controls;
++    requires com.dlsc.formsfx;
++    requires validatorfx;
++    requires org.kordamp.ikonli.javafx;
++    requires org.kordamp.bootstrapfx.core;
++    requires eu.hansolo.tilesfx;
++    requires com.almasb.fxgl.all;
++
+     opens com.example.task_1 to javafx.fxml;
+     exports com.example.task_1;
+ }
+\ No newline at end of file
+Index: src/main/java/com/example/task_1/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/task_1/Main.java b/src/main/java/com/example/task_1/Main.java
+--- a/src/main/java/com/example/task_1/Main.java	(revision 528a3a6c3c59becff2cc954769e4943436b6e006)
++++ b/src/main/java/com/example/task_1/Main.java	(date 1670962976314)
+@@ -1,4 +1,19 @@
+ package com.example.task_1;
++/**
++ * Create a java application that will read data from a source (an in.txt file) and sort it.
++ * The data has a tabular structure. Lines are separated by line breaks. Columns are tabs.
++ * The data must be sorted and output to the out.txt file.
++ * Sorting is done first by the first column of rows,
++ * then by the second (if the rows or numbers in the first column are the same), and so on.
++ * Data related to the same row in the grid must also be in the same row.
++ * At the same time: any number in the column is higher than any non-number, numbers are sorted in ascending order,
++ * lines are in lexicographic order.
++ *
++ * Создайте java-приложение, которое будет считывать данные из источника (файл in.txt) и выполнять их сортировку. Данные имеют табличную структуру. Строки разделены переносом строки. Столбцы – знаком табуляции.
++ * Данные необходимо отсортировать и вывести в файл out.txt.
++ * Сортировка производится сначала по первой колонке строк, потом по второй (если строки или числа в первой колонке совпадают) и т.д.. Данные относящиеся к одной строке в гриде должны быть также в одной строке.
++ * При этом: любое число в колонке выше любого не числа, числа отсортированы по возрастанию, строки в лексикографическом порядке.
++ */
+ 
+ import javafx.application.Application;
+ import javafx.fxml.FXMLLoader;
+@@ -7,11 +22,11 @@
+ 
+ import java.io.IOException;
+ 
+-public class HelloApplication extends Application {
++public class Main extends Application {
+     @Override
+     public void start(Stage stage) throws IOException {
+-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
++        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("task.fxml"));
++        Scene scene = new Scene(fxmlLoader.load(), 588, 588);
+         stage.setTitle("Hello!");
+         stage.setScene(scene);
+         stage.show();
+Index: in.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/in.txt b/in.txt
+new file mode 100644
+--- /dev/null	(date 1670884831662)
++++ b/in.txt	(date 1670884831662)
+@@ -0,0 +1,62 @@
++4567    bcde    2345    cdeg    4568    5877    kyza
++wxyz    1235    bcde    2345    cdeg    4568    5877
++xyza    -235    bcde    2345    cdeg    4568    5877
++2345    1235    bcde    2345    cdeg    4568    5877
++zabc    xyza    bcde    2345    cdeg    4568    5877
++abcd    1235    bcde    2345    cdeg    4568    cdeg
++abcd    -235    bcde    2345    cdeg    4568    5877
++efgh    1235    bcde    2345    cdeg    4568    5877
++fghi    -235    bcde    2345    cdeg    4568    5877
++ghij    1235    abcd    2345    cdeg    4568    cdeg
++hijk    xyza    bcde    2345    cdeg    4568    5877
++lmno    9235    bcde    2345    cdeg    4568    5877
++mnop    2235    bcde    2345    cdeg    4568    5877
++nopq    3235    2345    2345    cdeg    4568    5877
++opqr    fghi    bcde    2345    cdeg    cdeg    5877
++2345    1235    acde    2345    cdeg    4568    5877
++qrst    1235    dcde    2345    cdeg    4568    5877
++rstu    1235    gcde    2345    cdeg    4568    5877
++opqr    1235    bcde    2345    cdeg    4568    5877
++pqrs    1235    2345    2345    cdeg    cdeg    cdeg
++ghij    -235    abcd    2345    cdeg    4568    5877
++hijk    8235    bcde    2345    cdeg    4568    5877
++uvwx    -235    bcde    2345    cdeg    4568    5877
++2345    fghi    bcde    2345    cdeg    4568    5877
++2345    1235    bcde    7345    cdeg    cdeg    5877
++xyza    1235    2345    6345    cdeg    4568    5877
++yzab    1235    bcde    8345    cdeg    4568    5877
++abcd    1235    bcde    2345    cdeg    4568    5877
++1235    bcde    2345    cdeg    4568    5877    xyza
++2345    bcde    2345    cdeg    4568    5877    xyza
++3456    bcde    2345    2345    2345    cdeg    cdeg
++4567    bcde    2345    cdeg    4568    5877    xyza
++4567    bcde    2345    cdeg    cdeg    5877    xyza
++abcd    2235    bcde    2345    cdeg    4568    5877
++bcde    dbcd    bcde    2345    cdeg    4568    5877
++cdef    3235    bcde    stuv    cdeg    4568    5877
++-456    bcde    2345    cdeg    4568    5877    gyza
++defg    -235    bcde    2345    cdeg    4568    5877
++efgh    fghi    bcde    2345    cdeg    cdeg    cdeg
++fghi    6235    bcde    cdeg    cdeg    4568    5877
++bcde    abcd    bcde    2345    cdeg    4568    5877
++cdef    1235    bcde    2345    cdeg    4568    5877
++defg    1235    bcde    cdeg    2345    4568    5877
++2345    1235    bcde    2345    cdeg    4568    5877
++vwxy    1235    bcde    5345    cdeg    4568    5877
++-567    bcde    2545    cdeg    4568    cdeg    xyza
++stuv    1235    jcde    2345    cdeg    4568    5877
++tuvw    1235    tcde    2345    cdeg    cdeg    5877
++zabc    1235    bcde    2345    adeg    4568    5877
++abcd    1235    bcde    2345    ddeg    4568    cdeg
++abcd    1235    bcde    cdeg    udeg    cdeg    5877
++abcd    1235    bcde    2345    cdeg    6568    cdeg
++-235    bcde    2345    cdeg    4568    4877    xyza
++-345    bcde    2345    cdeg    4568    5877    ayza
++2345    1235    bcde    2345    cdeg    stuv    5877
++qrst    1235    bcde    2345    cdeg    4568    5877
++rstu    1235    bcde    cdeg    cdeg    4568    5877
++stuv    -235    bcde    2345    cdeg    stuv    5877
++tuvw    1235    bcde    2345    cdeg    4568    cdeg
++lmno    -235    bcde    cdeg    cdeg    4568    5877
++mnop    1235    bcde    2345    cdeg    cdeg    5877
++nopq    1235    bcde    2345    cdeg    4568    cdeg
+\ No newline at end of file
+Index: NewFile.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/NewFile.txt b/NewFile.txt
+new file mode 100644
+--- /dev/null	(date 1670963274137)
++++ b/NewFile.txt	(date 1670963274137)
+@@ -0,0 +1,62 @@
++-235    bcde    2345    cdeg    4568    4877    xyza
++-345    bcde    2345    cdeg    4568    5877    ayza
++-456    bcde    2345    cdeg    4568    5877    gyza
++-567    bcde    2545    cdeg    4568    cdeg    xyza
++1235    bcde    2345    cdeg    4568    5877    xyza
++2345    1235    acde    2345    cdeg    4568    5877
++2345    1235    bcde    2345    cdeg    4568    5877
++2345    1235    bcde    2345    cdeg    4568    5877
++2345    1235    bcde    2345    cdeg    stuv    5877
++2345    1235    bcde    7345    cdeg    cdeg    5877
++2345    bcde    2345    cdeg    4568    5877    xyza
++2345    fghi    bcde    2345    cdeg    4568    5877
++3456    bcde    2345    2345    2345    cdeg    cdeg
++4567    bcde    2345    cdeg    4568    5877    kyza
++4567    bcde    2345    cdeg    4568    5877    xyza
++4567    bcde    2345    cdeg    cdeg    5877    xyza
++abcd    -235    bcde    2345    cdeg    4568    5877
++abcd    1235    bcde    2345    cdeg    4568    5877
++abcd    1235    bcde    2345    cdeg    4568    cdeg
++abcd    1235    bcde    2345    cdeg    6568    cdeg
++abcd    1235    bcde    2345    ddeg    4568    cdeg
++abcd    1235    bcde    cdeg    udeg    cdeg    5877
++abcd    2235    bcde    2345    cdeg    4568    5877
++bcde    abcd    bcde    2345    cdeg    4568    5877
++bcde    dbcd    bcde    2345    cdeg    4568    5877
++cdef    1235    bcde    2345    cdeg    4568    5877
++cdef    3235    bcde    stuv    cdeg    4568    5877
++defg    -235    bcde    2345    cdeg    4568    5877
++defg    1235    bcde    cdeg    2345    4568    5877
++efgh    1235    bcde    2345    cdeg    4568    5877
++efgh    fghi    bcde    2345    cdeg    cdeg    cdeg
++fghi    -235    bcde    2345    cdeg    4568    5877
++fghi    6235    bcde    cdeg    cdeg    4568    5877
++ghij    -235    abcd    2345    cdeg    4568    5877
++ghij    1235    abcd    2345    cdeg    4568    cdeg
++hijk    8235    bcde    2345    cdeg    4568    5877
++hijk    xyza    bcde    2345    cdeg    4568    5877
++lmno    -235    bcde    cdeg    cdeg    4568    5877
++lmno    9235    bcde    2345    cdeg    4568    5877
++mnop    1235    bcde    2345    cdeg    cdeg    5877
++mnop    2235    bcde    2345    cdeg    4568    5877
++nopq    1235    bcde    2345    cdeg    4568    cdeg
++nopq    3235    2345    2345    cdeg    4568    5877
++opqr    1235    bcde    2345    cdeg    4568    5877
++opqr    fghi    bcde    2345    cdeg    cdeg    5877
++pqrs    1235    2345    2345    cdeg    cdeg    cdeg
++qrst    1235    bcde    2345    cdeg    4568    5877
++qrst    1235    dcde    2345    cdeg    4568    5877
++rstu    1235    bcde    cdeg    cdeg    4568    5877
++rstu    1235    gcde    2345    cdeg    4568    5877
++stuv    -235    bcde    2345    cdeg    stuv    5877
++stuv    1235    jcde    2345    cdeg    4568    5877
++tuvw    1235    bcde    2345    cdeg    4568    cdeg
++tuvw    1235    tcde    2345    cdeg    cdeg    5877
++uvwx    -235    bcde    2345    cdeg    4568    5877
++vwxy    1235    bcde    5345    cdeg    4568    5877
++wxyz    1235    bcde    2345    cdeg    4568    5877
++xyza    -235    bcde    2345    cdeg    4568    5877
++xyza    1235    2345    6345    cdeg    4568    5877
++yzab    1235    bcde    8345    cdeg    4568    5877
++zabc    1235    bcde    2345    adeg    4568    5877
++zabc    xyza    bcde    2345    cdeg    4568    5877
